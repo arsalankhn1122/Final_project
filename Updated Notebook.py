@@ -119,9 +119,9 @@ arcpy.analysis.Statistics(
     in_table=health_fc,
     out_table=stats_tbl,
     statistics_fields=[
+        ["NEAR_DIST", "MEAN"],
         ["NEAR_DIST", "MIN"],
         ["NEAR_DIST", "MAX"],
-        ["NEAR_DIST", "MEAN"],
         ["NEAR_DIST", "STD"],
         ["NEAR_DIST", "MEDIAN"]
     ]
@@ -136,4 +136,5 @@ print(" -", clip_fc)
 print(" -", proj_fc)
 print(" -", health_fc)
 print(" -", fire_fc)
+
 print(" -", stats_tbl)
